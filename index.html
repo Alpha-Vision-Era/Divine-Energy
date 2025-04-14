@@ -9,64 +9,110 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #f7f9fc;
+      background: linear-gradient(to bottom right, #fefefe, #f3f9ff);
       color: #222;
+      overflow-x: hidden;
     }
+
     header {
-      background: linear-gradient(to right, #6a11cb, #2575fc);
+      background: linear-gradient(270deg, #6a11cb, #2575fc);
+      background-size: 400% 400%;
       color: white;
       padding: 60px 20px;
       text-align: center;
+      animation: bgShift 10s ease infinite;
     }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     header h1 {
       font-size: 2.8rem;
       margin-bottom: 10px;
+      animation: fadeInDown 1.5s ease-out;
     }
+
     header p {
       font-size: 1.2rem;
       max-width: 600px;
       margin: 0 auto;
+      animation: fadeInUp 1.5s ease-out;
     }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
     section {
       padding: 40px 20px;
       max-width: 900px;
       margin: auto;
+      animation: fadeIn 1.2s ease;
     }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
     section h2 {
       font-size: 1.8rem;
       margin-bottom: 20px;
       color: #333;
+      border-left: 5px solid #2575fc;
+      padding-left: 10px;
     }
+
     .case-links a, footer a {
       display: inline-block;
       margin: 5px 10px;
       text-decoration: none;
       color: #2575fc;
       font-weight: 600;
+      transition: transform 0.3s ease;
     }
+
+    .case-links a:hover, footer a:hover {
+      transform: scale(1.05);
+    }
+
     .faq q {
       display: block;
       font-weight: bold;
       margin-top: 20px;
     }
+
     .faq p {
       margin-top: 5px;
     }
+
     .email-box {
       margin-top: 20px;
       background: white;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+      animation: fadeInUp 1s ease;
     }
+
     .email-box input {
       padding: 10px;
       font-size: 1rem;
-      width: 80%;
+      width: 70%;
       border: 1px solid #ccc;
       border-radius: 8px;
       margin-right: 10px;
     }
+
     .email-box button {
       padding: 10px 20px;
       font-size: 1rem;
@@ -75,13 +121,20 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
+
+    .email-box button:hover {
+      background: #1a4dc5;
+    }
+
     footer {
       text-align: center;
       padding: 30px 10px;
       background: #eaeaea;
       margin-top: 40px;
     }
+
     footer p {
       margin: 10px 0;
     }
