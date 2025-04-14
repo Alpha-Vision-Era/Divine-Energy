@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,154 +8,134 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #fefefe, #f3f9ff);
+      background: #f7f9fc;
       color: #222;
-      overflow-x: hidden;
-    }
+    }.hero-image {
+  background-image: url('images/brain-energy.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 2s ease;
+}
+.hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.hero-image h1, .hero-image p {
+  position: relative;
+  z-index: 1;
+}
 
-    header {
-      background: linear-gradient(270deg, #6a11cb, #2575fc);
-      background-size: 400% 400%;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      animation: bgShift 10s ease infinite;
-    }
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
 
-    @keyframes bgShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+.visual-section {
+  text-align: center;
+  margin: 40px 0;
+}
+.visual-section img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 1s ease;
+}
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      animation: fadeInDown 1.5s ease-out;
-    }
+.case-links a, footer a {
+  display: inline-block;
+  margin: 5px 10px;
+  text-decoration: none;
+  color: #2575fc;
+  font-weight: 600;
+}
 
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-      animation: fadeInUp 1.5s ease-out;
-    }
+.faq q {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.faq p {
+  margin-top: 5px;
+}
 
-    @keyframes fadeInDown {
-      0% { opacity: 0; transform: translateY(-30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+.email-box {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+.email-box input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.email-box button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  background: #eaeaea;
+  margin-top: 40px;
+}
+.footer-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      animation: fadeIn 1.2s ease;
-    }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: #333;
-      border-left: 5px solid #2575fc;
-      padding-left: 10px;
-    }
-
-    .case-links a, footer a {
-      display: inline-block;
-      margin: 5px 10px;
-      text-decoration: none;
-      color: #2575fc;
-      font-weight: 600;
-      transition: transform 0.3s ease;
-    }
-
-    .case-links a:hover, footer a:hover {
-      transform: scale(1.05);
-    }
-
-    .faq q {
-      display: block;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    .faq p {
-      margin-top: 5px;
-    }
-
-    .email-box {
-      margin-top: 20px;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.08);
-      animation: fadeInUp 1s ease;
-    }
-
-    .email-box input {
-      padding: 10px;
-      font-size: 1rem;
-      width: 70%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-right: 10px;
-    }
-
-    .email-box button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background: #2575fc;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .email-box button:hover {
-      background: #1a4dc5;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      background: #eaeaea;
-      margin-top: 40px;
-    }
-
-    footer p {
-      margin: 10px 0;
-    }
   </style>
 </head>
 <body>
-  <header>
+  <div class="hero-image">
     <h1>Divine Energy in the Age of WiFi</h1>
     <p>A brain-based healing method guided by energy, intention, and spiritual alignment with Allah.</p>
-  </header>
-
-  <section>
+  </div>  <section>
     <h2>About Syed Waleed Mehboob Ali</h2>
     <p><strong>Syed Waleed Mehboob Ali</strong> is a businessman, frequency-based healer, and spiritual thinker. After undergoing a deep mental, emotional, and spiritual transformation, he discovered an inner energy rooted in brain activity and divine connection. Without social media presence, and away from commercial publicity, he uses focused brain-based intention to heal individuals — helping them overcome invisible mental blocks, resolve family tensions, or manifest long-awaited results. He believes healing is an amanat (trust), not a profession, and that real transformation comes through Allah alone.</p>
-  </section>
-
-  <section>
+  </section>  <section class="visual-section">
+    <h2>Visualizing the Healing Field</h2>
+    <img src="images/meditation-frequency.jpg" alt="Spiritual Frequencies" />
+  </section>  <section>
     <h2>Scientific & Spiritual Framework</h2>
     <p>The foundation of this healing approach is both spiritual and neurological. It draws from the concepts of neuroplasticity, intention-driven energy transmission, and consciousness field theories. Scientific references include the work of Dr. Joe Dispenza (on brain-heart coherence), Rupert Sheldrake (morphic resonance), and Bruce Lipton (belief biology). While these frameworks offer grounding, the core remains spiritual — that all power belongs to Allah, and healing manifests only through divine permission and alignment. No device, chant, or substance is used — only focused thought and intention carried through divine connection.</p>
-  </section>
-
-  <section>
+  </section>  <section>
     <h2>Case Study Summary</h2>
     <p>Several real-life cases have been documented where mental blockages were removed, professional opportunities unblocked, and interpersonal conflicts resolved — often within days. These include healing of families affected by spiritual fog, investors realigning with hesitant business deals, and marriage/job delays that disappeared without any material intervention. These outcomes were not coincidence but signs of deep inner shift — triggered by focused energy through divine frequency work. All healing is done with full trust in Allah, and no names are revealed out of respect.</p>
     <div class="case-links">
@@ -165,39 +144,29 @@
       <a href="https://medium.com/@mysticvibesera/divine-energy-in-the-age-of-wifi-50a3ff7e90b9">Medium</a>
       <a href="https://www.scribd.com/document/849315658/Divine-Energy-in-the-Age-of-WiFi">Scribd</a>
     </div>
-  </section>
-
-  <section class="faq">
+  </section>  <section class="faq">
     <h2>FAQs</h2>
     <q>Is this similar to hypnosis?</q>
     <p>No. This is not about suggestions or trance states. It’s frequency work through brainwave alignment and spiritual intention.</p>
-
     <q>Can it remove black magic or spiritual interference?</q>
     <p>Yes, in many cases, it clears blockages caused by such interference, especially when guided by divine intention.</p>
-
     <q>Does this method work for mental health?</q>
     <p>Yes. Many people experience peace, clarity, and breakthrough from anxiety, confusion, or lack of progress.</p>
-
     <q>Can anyone learn this?</q>
     <p>No. It is not a course or method that can be taught. It is a subtle art developed through personal inner alignment and divine trust.</p>
-
     <q>Do you charge for healing?</q>
     <p>Healing is not a service — it is a responsibility. Support is appreciated, but healing is offered with sincerity, not business terms.</p>
-
     <q>How can I contact you?</q>
     <p>Email: <strong>mysticvibesera@gmail.com</strong></p>
-  </section>
-
-  <section>
+  </section>  <section>
     <h2>Join the Healing Circle</h2>
     <p>Enter your email to receive future case updates, reflections, and resources.</p>
     <div class="email-box">
       <input type="email" placeholder="Enter your email" />
       <button>Subscribe</button>
     </div>
-  </section>
-
-  <footer>
+  </section>  <footer>
+    <img class="footer-image" src="images/divine-connection.jpg" alt="Divine Connection"/>
     <p>Read More:</p>
     <a href="https://www.academia.edu/128772972/Divine_Energy_in_the_Age_of_WiFi">Academia</a>
     <a href="https://zenodo.org/records/15205348">Zenodo</a>
