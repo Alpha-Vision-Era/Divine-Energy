@@ -7,13 +7,13 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #f7f9fc;
+  background: #fefdfc; /* Soft cream background */
   color: #222;
   line-height: 1.6;
 }
 
 header {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #b497d8, #a8d0db); /* Soft purple to pastel blue */
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -46,7 +46,7 @@ section h2 {
   display: inline-block;
   margin: 5px 10px;
   text-decoration: none;
-  color: #2575fc;
+  color: #2575fc; /* Pastel blue links */
   font-weight: 600;
 }
 
@@ -62,7 +62,7 @@ section h2 {
 
 .email-box {
   margin-top: 20px;
-  background: white;
+  background: #b7e4c7; /* Mint Green box */
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
@@ -80,7 +80,7 @@ section h2 {
 .email-box button {
   padding: 10px 20px;
   font-size: 1rem;
-  background: #2575fc;
+  background: #a8d0db; /* Soft pastel blue */
   color: white;
   border: none;
   border-radius: 8px;
@@ -100,4 +100,5 @@ footer p {
 
 footer a {
   font-weight: 600;
+  color: #2575fc; /* Pastel blue links */
 }
