@@ -450,10 +450,117 @@
 
     <!-- ===== FAQ SECTION ===== -->
     <section class="container">
-        <h2>FAQ</h2>
-        <div class="faq-item">
-            <div class="faq-question">
-                Is this energy the same as spirituality or religion?
-                <span class="toggle-icon">+</span>
-              </div>
-              
+‎        <h2>FAQ</h2>
+‎        <div class="faq-item">
+‎            <div class="faq-question">
+‎                Is this energy the same as spirituality or religion?
+‎                <span class="toggle-icon">+</span>
+‎            </div>
+‎            <div class="faq-answer">
+‎                <div class="faq-answer-inner">
+‎                    <p>No. Divine energy is a metaphysical concept that can align with—but is not limited to—religious frameworks. It is more aligned with consciousness-based science.</p>
+‎                </div>
+‎            </div>
+‎        </div>
+‎        <div class="faq-item">
+‎            <div class="faq-question">
+‎                Is there any proof this energy exists?
+‎                <span class="toggle-icon">+</span>
+‎            </div>
+‎            <div class="faq-answer">
+‎                <div class="faq-answer-inner">
+‎                    <p>There is growing indirect evidence through frequency science, noetic studies, quantum models, and brain wave research. But direct physical evidence is still evolving.</p>
+‎                </div>
+‎            </div>
+‎        </div>
+‎        <div class="faq-item">
+‎            <div class="faq-question">
+‎                Can everyone access this energy?
+‎                <span class="toggle-icon">+</span>
+‎            </div>
+‎            <div class="faq-answer">
+‎                <div class="faq-answer-inner">
+‎                    <p>Not equally. Some are born with a natural affinity. Others may train and develop partial access, but mastery requires a specific internal configuration.</p>
+‎                </div>
+‎            </div>
+‎        </div>
+‎        <div class="faq-item">
+‎            <div class="faq-question">
+‎                Is this the same as black magic or sorcery?
+‎                <span class="toggle-icon">+</span>
+‎            </div>
+‎            <div class="faq-answer">
+‎                <div class="faq-answer-inner">
+‎                    <p>No. Black magic relies on rituals and often unethical intent. Divine energy operates through inner alignment and moral clarity.</p>
+‎                </div>
+‎            </div>
+‎        </div>
+‎    </section>
+‎
+‎    <!-- ===== PUBLISHED VERSIONS SECTION ===== -->
+‎    <section class="container">
+‎        <h2>Published versions</h2>
+‎        <div class="publications">
+‎            <a href="https://www.academia.edu/128772972/Divine_Energy_in_the_Age_of_WiFi" class="publication-link" target="_blank">
+‎                <i class="fas fa-book-open"></i> Academia.edu
+‎            </a>
+‎            <a href="https://medium.com/@mysticvibesera/divine-energy-in-the-age-of-wifi-50a3ff7e90b9" class="publication-link" target="_blank">
+‎                <i class="fab fa-medium"></i> Medium
+‎            </a>
+‎            <a href="https://www.scribd.com/document/849315658/Divine-Energy-in-the-Age-of-WiFi" class="publication-link" target="_blank">
+‎                <i class="fas fa-scroll"></i> Scribd
+‎            </a>
+‎            <a href="https://zenodo.org/records/15205348" class="publication-link" target="_blank">
+‎                <i class="fas fa-archive"></i> Zenodo
+‎            </a>
+‎        </div>
+‎    </section>
+‎
+‎    <!-- ===== FOOTER ===== -->
+‎    <footer class="container">
+‎        <div class="social-icons">
+‎            <a href="#"><i class="fab fa-twitter"></i></a>
+‎            <a href="#"><i class="fab fa-instagram"></i></a>
+‎            <a href="#"><i class="fab fa-linkedin"></i></a>
+‎            <a href="mailto:mysticvibesera@gmail.com"><i class="fas fa-envelope"></i></a>
+‎        </div>
+‎        <p>© 2025 Syed Waleed Mehboob Ali. All Rights Reserved.</p>
+‎        <p>For inquiries, contact: <a href="mailto:mysticvibesera@gmail.com">mysticvibesera@gmail.com</a></p>
+‎    </footer>
+‎
+‎    <script>
+‎        // FAQ toggle functionality
+‎        document.querySelectorAll('.faq-question').forEach(question => {
+‎            question.addEventListener('click', () => {
+‎                const item = question.parentElement;
+‎                item.classList.toggle('active');
+‎                
+‎                // Change icon
+‎                const icon = question.querySelector('.toggle-icon');
+‎                icon.textContent = item.classList.contains('active') ? '−' : '+';
+‎            });
+‎        });
+‎
+‎        // Create energy particles
+‎        function createParticles() {
+‎            const hero = document.querySelector('.hero');
+‎            for (let i = 0; i < 5; i++) {
+‎                const particle = document.createElement('div');
+‎                particle.classList.add('energy-particle');
+‎                particle.style.width = `${Math.random() * 100 + 50}px`;
+‎                particle.style.height = particle.style.width;
+‎                particle.style.left = `${Math.random() * 100}%`;
+‎                particle.style.top = `${Math.random() * 100}%`;
+‎                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+‎                particle.style.animationDelay = `${Math.random() * 5}s`;
+‎                hero.appendChild(particle);
+‎            }
+‎        }
+‎
+‎        // Initialize on load
+‎        window.addEventListener('load', () => {
+‎            createParticles();
+‎        });
+‎    </script>
+‎</body>
+‎</html>
