@@ -1,4 +1,4 @@
-/* General Reset and Body Styles */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,212 +6,114 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #fafafa;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Header Section with Gradient and Hover Effect */
-header {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  padding: 80px 20px;
-  color: white;
-  text-align: center;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  font-size: 3rem;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-header h1:hover {
-  transform: scale(1.1);
-}
-
-header p {
-  font-size: 1.3rem;
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-/* Section Styles with Spiritual Glow Effects */
-section {
-  padding: 60px 20px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #fdfdfd;
+  color: #222;
+  line-height: 1.7;
+  padding: 20px;
   max-width: 900px;
-  margin: 40px auto;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  animation: fadeIn 1s ease-out;
+  margin: auto;
 }
 
-section h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  text-align: center;
-  position: relative;
+/* Header */
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
 }
 
-section h2::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #2575fc;
-  animation: glowing 1.5s infinite alternate;
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
 }
 
-/* Glowing Effect */
-@keyframes glowing {
-  0% {
-    background: #6a11cb;
-  }
-  100% {
-    background: #2575fc;
-  }
+h2 {
+  font-size: 1.6rem;
+  margin-top: 30px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Case Links Section with Hover Animation */
-.case-links a {
-  text-decoration: none;
-  color: #2575fc;
-  font-weight: 600;
-  margin: 10px;
-  padding: 10px 20px;
-  border-radius: 25px;
-  background: #f0f8ff;
-  transition: all 0.3s ease;
-}
-
-.case-links a:hover {
-  background: #2575fc;
-  color: white;
-  transform: scale(1.05);
-}
-
-/* FAQ Section Styling */
-.faq q {
-  display: block;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #6a11cb;
+h3 {
+  font-size: 1.3rem;
   margin-top: 20px;
 }
 
-.faq p {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #444;
+/* Paragraph */
+p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
 }
 
-/* Email Box Design with Animated Button */
-.email-box {
-  margin-top: 40px;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.email-box input {
-  padding: 15px;
-  font-size: 1.1rem;
-  width: 70%;
-  border: 2px solid #2575fc;
-  border-radius: 25px;
-  margin-right: 20px;
-  transition: border 0.3s ease;
-}
-
-.email-box input:focus {
-  border: 2px solid #6a11cb;
-  outline: none;
-}
-
-.email-box button {
-  padding: 15px 25px;
-  background: #2575fc;
-  color: white;
-  border-radius: 25px;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.email-box button:hover {
-  background: #6a11cb;
-  transform: scale(1.05);
-}
-
-/* Footer Section with Icons and Contact Links */
-footer {
-  text-align: center;
-  background: #f0f8ff;
-  padding: 30px 10px;
-  margin-top: 40px;
-}
-
-footer a {
-  color: #2575fc;
+/* Links */
+a {
+  color: #007acc;
   text-decoration: none;
-  margin: 10px;
-  font-weight: bold;
-  position: relative;
 }
 
-footer a::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #2575fc;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease-in-out;
+a:hover {
+  text-decoration: underline;
 }
 
-footer a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+/* Lists */
+ul, ol {
+  margin-left: 25px;
+  margin-bottom: 20px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
+/* Blockquote */
+blockquote {
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 4px solid #ccc;
+  font-style: italic;
+  color: #555;
+}
 
-  .email-box input {
-    width: 100%;
-    margin-right: 0;
-  }
+/* Image */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
 
-  .email-box button {
-    width: 100%;
-  }
+/* Code Block */
+pre {
+  background: #f4f4f4;
+  padding: 15px;
+  overflow-x: auto;
+  border-left: 4px solid #ccc;
+  font-family: monospace;
+}
 
-  section {
-    padding: 30px 15px;
+/* Footer or contact info */
+footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+}
+
+/* Light Container Box */
+.container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  margin-bottom: 40px;
+}
+
+/* Responsive Text */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 1rem;
   }
 }
