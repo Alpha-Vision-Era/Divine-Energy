@@ -11,6 +11,12 @@ body {
   line-height: 1.8;
   font-size: 16px;
   scroll-behavior: smooth;
+  /* Existing styles... */
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  letter-spacing: normal;
+  line-height: 1.6;
+  }
+  
 }
 
 /* Header (No Glow, Subtle Slide-In Animation) */
