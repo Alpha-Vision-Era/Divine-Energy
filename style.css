@@ -8,6 +8,89 @@ body {
 
 /* Header Styles */
 .site-header {
+  background: linear-gradient(to right, #e0eafc, #cfdef3); /* Light gradient background for the header */
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 1.5s ease-out forwards;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Title Styling with Glowing Effect and Purple Background */
+.site-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff; /* White text for contrast */
+  text-shadow: 
+    0 0 10px rgba(44, 62, 80, 0.4),
+    0 0 20px rgba(44, 62, 80, 0.3),
+    0 0 30px rgba(44, 62, 80, 0.2);
+  
+  /* Purple background and padding */
+  background-color: #8e44ad; /* Purple background */
+  padding: 1rem 2rem; /* Padding around the title */
+  
+  border-radius: 8px; /* Optional: Rounded corners for a soft look */
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Subtitle Styling */
+.site-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+/* Fade-in + Slide-up Animation for Header */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Color-shifting Glow Animation for Title */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(44, 62, 80, 0.4),
+      0 0 20px rgba(44, 62, 80, 0.3),
+      0 0 30px rgba(44, 62, 80, 0.2);
+  }
+  25% {
+    text-shadow: 
+      0 0 15px rgba(52, 152, 219, 0.8),
+      0 0 30px rgba(52, 152, 219, 0.7),
+      0 0 45px rgba(52, 152, 219, 0.6);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(155, 89, 182, 0.8),
+      0 0 30px rgba(155, 89, 182, 0.7),
+      0 0 45px rgba(155, 89, 182, 0.6);
+  }
+  75% {
+    text-shadow: 
+      0 0 15px rgba(231, 76, 60, 0.8),
+      0 0 30px rgba(231, 76, 60, 0.7),
+      0 0 45px rgba(231, 76, 60, 0.6);
+  }
+}
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header Styles */
+.site-header {
   background: linear-gradient(to right, #e0eafc, #cfdef3);
   padding: 2rem 1rem;
   text-align: center;
