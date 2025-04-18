@@ -1,108 +1,263 @@
-/* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+/**
+ * ACADEMIC PROJECT STYLESHEET
+ * Project: [Project Name]
+ * Author: [Your Name]
+ * Institution: [Your Institution]
+ * Date: [YYYY-MM-DD]
+ * Version: 1.0
+ * 
+ * Table of Contents:
+ * 1. Base Styles
+ * 2. Typography
+ * 3. Layout
+ * 4. Components
+ * 5. Utilities
+ */
 
-/* Base Styles */
+/* ========================
+   1. Base Styles
+   ======================== */
+:root {
+    /* Color Palette */
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-gray: #ecf0f1;
+    --dark-gray: #7f8c8d;
+    
+    /* Spacing */
+    --base-spacing: 1rem;
+    --small-spacing: calc(var(--base-spacing) / 2);
+    --large-spacing: calc(var(--base-spacing) * 2);
+    
+    /* Typography */
+    --base-font-size: 16px;
+    --heading-scale: 1.25;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--base-font-size);
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Merriweather', serif;
-  background: #ffffff;
-  color: #1a1a1a;
-  line-height: 1.8;
-  font-size: 16px;
-  scroll-behavior: smooth;
-  /* Existing styles... */
-  font-family: 'Inter', 'Helvetica Neue', sans-serif;
-  letter-spacing: normal;
-  line-height: 1.6;
-  }
-  
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Header (No Glow, Subtle Slide-In Animation) */
-header {
-  background-color: #f5f7fa;
-  padding: 60px 20px;
-  text-align: center;
-  border-bottom: 1px solid #ccc;
-  animation: slideFadeIn 1s ease-out;
+/* ========================
+   2. Typography
+   ======================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--small-spacing);
+    color: var(--primary-color);
 }
 
-.site-title {
-  font-size: 2.5rem;
-  margin: 0;
-  color: #202020;
+h1 { font-size: calc(var(--base-font-size) * pow(var(--heading-scale), 3)); }
+h2 { font-size: calc(var(--base-font-size) * pow(var(--heading-scale), 2)); }
+h3 { font-size: calc(var(--base-font-size) * var(--heading-scale)); }
+
+p {
+    margin-bottom: var(--base-spacing);
+    text-align: justify;
+    hyphens: auto;
 }
 
-.site-subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  margin-top: 10px;
-}
-
-/* Section Content */
-section {
-  max-width: 960px;
-  margin: 60px auto;
-  padding: 40px 30px;
-  background-color: #fafafa;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  animation: fadeIn 1.2s ease;
-}
-
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #1e1e1e;
-  border-bottom: 2px solid #0077cc;
-  padding-bottom: 6px;
-}
-
-section p {
-  font-size: 1.05rem;
-  text-align: justify;
-  color: #333;
-}
-
-/* Animation Keyframes */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideFadeIn {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Footer */
-footer {
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
-  color: #444;
-}
-
-/* Links */
 a {
-  color: #0077cc;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-a:hover {
-  color: #005099;
-  text-decoration: underline;
+a:hover,
+a:focus {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .site-title {
-    font-size: 2rem;
-  }
-  section {
-    padding: 30px 20px;
-  }
+/* Academic-specific typography */
+.citation {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.footnote {
+    font-size: 0.85rem;
+    vertical-align: super;
+    line-height: 0;
+}
+
+/* ========================
+   3. Layout
+   ======================== */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--base-spacing);
+}
+
+.main-content {
+    flex: 1;
+    padding: var(--large-spacing) 0;
+}
+
+.section {
+    margin-bottom: var(--large-spacing);
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+    gap: var(--base-spacing);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* ========================
+   4. Components
+   ======================== */
+/* Navigation */
+.navbar {
+    background-color: var(--primary-color);
+    padding: var(--small-spacing) 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-right: var(--base-spacing);
+}
+
+.nav-link {
+    color: white;
+    font-weight: 500;
+}
+
+/* Cards */
+.card {
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+    padding: var(--base-spacing);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--base-spacing);
+}
+
+.table th,
+.table td {
+    padding: var(--small-spacing);
+    border: 1px solid var(--light-gray);
+    text-align: left;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+/* Figures */
+.figure {
+    margin: var(--large-spacing) 0;
+    text-align: center;
+}
+
+.figure-caption {
+    font-style: italic;
+    margin-top: var(--small-spacing);
+    font-size: 0.9rem;
+}
+
+/* ========================
+   5. Utilities
+   ======================== */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.mt-1 { margin-top: var(--small-spacing); }
+.mt-2 { margin-top: var(--base-spacing); }
+.mt-3 { margin-top: var(--large-spacing); }
+
+.mb-1 { margin-bottom: var(--small-spacing); }
+.mb-2 { margin-bottom: var(--base-spacing); }
+.mb-3 { margin-bottom: var(--large-spacing); }
+
+.hidden { display: none; }
+.visible { visibility: visible; }
+
+/* Print Styles */
+@media print {
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    .no-print {
+        display: none;
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+    }
+    
+    .nav-item {
+        margin-right: 0;
+        margin-bottom: var(--small-spacing);
+    }
 }
