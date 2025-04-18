@@ -1,514 +1,566 @@
 ‎<!DOCTYPE html>
 ‎<html lang="en">
 ‎<head>
-‎    <meta charset="UTF-8">
-‎    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-‎    <title>Divine Energy in the Age of WiFi</title>
-‎    <style>
-‎        /* Global Styles */
-‎        * {
-‎            margin: 0;
-‎            padding: 0;
-‎            box-sizing: border-box;
-‎            font-family: 'Lora', Georgia, serif;
-‎        }
-‎        
-‎        body {
-‎            background-color: #f9f7f4;
-‎            color: #333;
-‎            line-height: 1.8;
-‎            font-size: 18px;
-‎        }
-‎        
-‎        .container {
-‎            max-width: 1200px;
-‎            margin: 0 auto;
-‎            padding: 0 20px;
-‎        }
-‎        
-‎        /* Header Styles */
-‎        header {
-‎            background-color: #fff;
-‎            padding: 30px 0;
-‎            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-‎            position: sticky;
-‎            top: 0;
-‎            z-index: 100;
-‎        }
-‎        
-‎        .header-container {
-‎            display: flex;
-‎            justify-content: space-between;
-‎            align-items: center;
-‎            max-width: 1200px;
-‎            margin: 0 auto;
-‎            padding: 0 20px;
-‎        }
-‎        
-‎        .logo {
-‎            font-size: 28px;
-‎            font-weight: 700;
-‎            text-decoration: none;
-‎            color: #333;
-‎            letter-spacing: 1px;
-‎        }
-‎        
-‎        nav ul {
-‎            display: flex;
-‎            list-style: none;
-‎        }
-‎        
-‎        nav ul li {
-‎            margin-left: 40px;
-‎        }
-‎        
-‎        nav ul li a {
-‎            color: #333;
-‎            text-decoration: none;
-‎            font-weight: 400;
-‎            font-size: 16px;
-‎            letter-spacing: 1px;
-‎            transition: all 0.3s ease;
-‎        }
-‎        
-‎        nav ul li a:hover {
-‎            color: #8a6d4b;
-‎        }
-‎        
-‎        /* Hero Section */
-‎        .hero {
-‎            height: 80vh;
-‎            display: flex;
-‎            align-items: center;
-‎            justify-content: center;
-‎            text-align: center;
-‎            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-‎            position: relative;
-‎            margin-bottom: 80px;
-‎        }
-‎        
-‎        .hero::before {
-‎            content: '';
-‎            position: absolute;
-‎            top: 0;
-‎            left: 0;
-‎            width: 100%;
-‎            height: 100%;
-‎            background: rgba(0,0,0,0.3);
-‎        }
-‎        
-‎        .hero-content {
-‎            position: relative;
-‎            z-index: 1;
-‎            max-width: 800px;
-‎            padding: 40px;
-‎        }
-‎        
-‎        .hero h1 {
-‎            font-size: 48px;
-‎            margin-bottom: 20px;
-‎            color: white;
-‎            font-weight: 400;
-‎            line-height: 1.3;
-‎        }
-‎        
-‎        .hero p {
-‎            font-size: 20px;
-‎            margin-bottom: 40px;
-‎            color: white;
-‎            opacity: 0.9;
-‎        }
-‎        
-‎        .hero .author {
-‎            font-style: italic;
-‎            color: white;
-‎            font-size: 18px;
-‎        }
-‎        
-‎        /* Section Styles */
-‎        .section {
-‎            margin-bottom: 80px;
-‎        }
-‎        
-‎        .section-title {
-‎            text-align: center;
-‎            margin-bottom: 60px;
-‎            font-size: 32px;
-‎            font-weight: 400;
-‎            color: #333;
-‎            position: relative;
-‎        }
-‎        
-‎        .section-title:after {
-‎            content: '';
-‎            display: block;
-‎            width: 60px;
-‎            height: 2px;
-‎            background: #8a6d4b;
-‎            margin: 20px auto 0;
-‎        }
-‎        
-‎        .content-block {
-‎            margin-bottom: 60px;
-‎        }
-‎        
-‎        .content-block h3 {
-‎            font-size: 24px;
-‎            margin-bottom: 20px;
-‎            font-weight: 400;
-‎            color: #555;
-‎        }
-‎        
-‎        .content-block p {
-‎            margin-bottom: 20px;
-‎        }
-‎        
-‎        .content-block ul, 
-‎        .content-block ol {
-‎            margin-bottom: 20px;
-‎            padding-left: 30px;
-‎        }
-‎        
-‎        .content-block li {
-‎            margin-bottom: 10px;
-‎        }
-‎        
-‎        /* Image Styles */
-‎        .content-image {
-‎            width: 100%;
-‎            height: auto;
-‎            margin: 40px 0;
-‎            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-‎        }
-‎        
-‎        .half-image {
-‎            width: 48%;
-‎            margin: 20px 1%;
-‎            display: inline-block;
-‎            vertical-align: top;
-‎        }
-‎        
-‎        /* Two Column Layout */
-‎        .two-column {
-‎            display: flex;
-‎            gap: 40px;
-‎            margin-bottom: 60px;
-‎        }
-‎        
-‎        .column {
-‎            flex: 1;
-‎        }
-‎        
-‎        /* FAQ Styles */
-‎        .faq-item {
-‎            margin-bottom: 30px;
-‎            border-bottom: 1px solid #eee;
-‎            padding-bottom: 20px;
-‎        }
-‎        
-‎        .faq-question {
-‎            font-weight: 600;
-‎            font-size: 20px;
-‎            margin-bottom: 10px;
-‎            color: #555;
-‎        }
-‎        
-‎        /* References */
-‎        .references {
-‎            font-size: 16px;
-‎            color: #777;
-‎            margin-top: 40px;
-‎        }
-‎        
-‎        /* Footer */
-‎        footer {
-‎            background-color: #333;
-‎            color: #fff;
-‎            padding: 60px 0 30px;
-‎            text-align: center;
-‎        }
-‎        
-‎        .footer-links {
-‎            display: flex;
-‎            justify-content: center;
-‎            margin-bottom: 30px;
-‎            flex-wrap: wrap;
-‎        }
-‎        
-‎        .footer-links a {
-‎            color: #fff;
-‎            margin: 0 15px;
-‎            text-decoration: none;
-‎            font-size: 16px;
-‎            transition: all 0.3s ease;
-‎        }
-‎        
-‎        .footer-links a:hover {
-‎            color: #8a6d4b;
-‎        }
-‎        
-‎        .copyright {
-‎            margin-top: 30px;
-‎            font-size: 14px;
-‎            color: #aaa;
-‎        }
-‎        
-‎        /* Responsive */
-‎        @media (max-width: 768px) {
-‎            .header-container {
-‎                flex-direction: column;
-‎                text-align: center;
-‎            }
-‎            
-‎            nav ul {
-‎                margin-top: 20px;
-‎                justify-content: center;
-‎            }
-‎            
-‎            nav ul li {
-‎                margin: 0 15px;
-‎            }
-‎            
-‎            .hero h1 {
-‎                font-size: 36px;
-‎            }
-‎            
-‎            .hero p {
-‎                font-size: 18px;
-‎            }
-‎            
-‎            .two-column {
-‎                flex-direction: column;
-‎            }
-‎            
-‎            .half-image {
-‎                width: 100%;
-‎                margin: 10px 0;
-‎            }
-‎        }
-‎    </style>
+‎    <meta charset="UTF-8">
+‎    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎    <title>Divine Energy in the Age of WiFi | Syed Waleed Mehboob Ali</title>
+‎    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+‎    <style>
+‎        /* ===== GLOBAL STYLES ===== */
+‎        :root {
+‎            --primary: #1a1a2e;
+‎            --secondary: #16213e;
+‎            --accent: #8e44ad;
+‎            --text: #e6e6e6;
+‎            --light: #f5f5f5;
+‎            --dark: #0f0f1a;
+‎            --gold: #d4af37;
+‎        }
+‎        
+‎        * {
+‎            margin: 0;
+‎            padding: 0;
+‎            box-sizing: border-box;
+‎        }
+‎        
+‎        body {
+‎            font-family: 'Georgia', serif;
+‎            line-height: 1.8;
+‎            color: var(--text);
+‎            background: var(--dark);
+‎            scroll-behavior: smooth;
+‎        }
+‎        
+‎        /* ===== HEADER/HERO SECTION ===== */
+‎        .hero {
+‎            height: 100vh;
+‎            background: 
+‎                linear-gradient(rgba(10, 10, 20, 0.8), rgba(5, 5, 15, 0.9)),
+‎                url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+‎            display: flex;
+‎            flex-direction: column;
+‎            justify-content: center;
+‎            align-items: center;
+‎            text-align: center;
+‎            position: relative;
+‎            overflow: hidden;
+‎        }
+‎        
+‎        .hero h1 {
+‎            font-size: 3.5rem;
+‎            margin-bottom: 1rem;
+‎            color: var(--gold);
+‎            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+‎            animation: fadeIn 1.5s ease;
+‎        }
+‎        
+‎        .hero p {
+‎            font-size: 1.5rem;
+‎            max-width: 800px;
+‎            margin: 0 auto 2rem;
+‎            animation: fadeIn 2s ease;
+‎        }
+‎        
+‎        /* ===== MAIN CONTENT SECTIONS ===== */
+‎        .container {
+‎            max-width: 1200px;
+‎            margin: 0 auto;
+‎            padding: 4rem 2rem;
+‎        }
+‎        
+‎        section {
+‎            padding: 5rem 0;
+‎            border-bottom: 1px solid rgba(255,255,255,0.1);
+‎        }
+‎        
+‎        h2 {
+‎            font-size: 2.5rem;
+‎            margin-bottom: 2rem;
+‎            color: var(--gold);
+‎            position: relative;
+‎            display: inline-block;
+‎        }
+‎        
+‎        h2::after {
+‎            content: '';
+‎            position: absolute;
+‎            bottom: -10px;
+‎            left: 0;
+‎            width: 60px;
+‎            height: 3px;
+‎            background: var(--accent);
+‎        }
+‎        
+‎        h3 {
+‎            color: var(--light);
+‎            margin: 1.5rem 0 1rem;
+‎            font-size: 1.5rem;
+‎        }
+‎        
+‎        p {
+‎            margin-bottom: 1.5rem;
+‎            font-size: 1.1rem;
+‎        }
+‎        
+‎        ul {
+‎            margin-left: 2rem;
+‎            margin-bottom: 2rem;
+‎        }
+‎        
+‎        li {
+‎            margin-bottom: 0.8rem;
+‎            position: relative;
+‎        }
+‎        
+‎        /* ===== TIMELINE SECTION ===== */
+‎        .timeline {
+‎            position: relative;
+‎            max-width: 1000px;
+‎            margin: 3rem auto;
+‎        }
+‎        
+‎        .timeline::before {
+‎            content: '';
+‎            position: absolute;
+‎            top: 0;
+‎            left: 50%;
+‎            width: 2px;
+‎            height: 100%;
+‎            background: var(--accent);
+‎            transform: translateX(-50%);
+‎        }
+‎        
+‎        .timeline-item {
+‎            padding: 20px 50px;
+‎            position: relative;
+‎            width: 50%;
+‎            box-sizing: border-box;
+‎        }
+‎        
+‎        .timeline-item:nth-child(odd) {
+‎            left: 0;
+‎            text-align: right;
+‎        }
+‎        
+‎        .timeline-item:nth-child(even) {
+‎            left: 50%;
+‎        }
+‎        
+‎        .timeline-img {
+‎            position: absolute;
+‎            width: 120px;
+‎            height: 120px;
+‎            border-radius: 50%;
+‎            background-size: cover;
+‎            background-position: center;
+‎            border: 5px solid var(--accent);
+‎            top: 20px;
+‎        }
+‎        
+‎        .timeline-item:nth-child(odd) .timeline-img {
+‎            right: -60px;
+‎        }
+‎        
+‎        .timeline-item:nth-child(even) .timeline-img {
+‎            left: -60px;
+‎        }
+‎        
+‎        /* ===== SCIENCE GRID SECTION ===== */
+‎        .science-grid {
+‎            display: grid;
+‎            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+‎            gap: 2rem;
+‎            margin-top: 3rem;
+‎        }
+‎        
+‎        .science-card {
+‎            background: var(--secondary);
+‎            border-radius: 10px;
+‎            overflow: hidden;
+‎            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+‎            transition: transform 0.3s ease;
+‎        }
+‎        
+‎        .science-card:hover {
+‎            transform: translateY(-10px);
+‎        }
+‎        
+‎        .science-card img {
+‎            width: 100%;
+‎            height: 200px;
+‎            object-fit: cover;
+‎        }
+‎        
+‎        .science-card h3 {
+‎            padding: 1.5rem 1.5rem 0;
+‎            color: var(--light);
+‎        }
+‎        
+‎        .science-card p {
+‎            padding: 0 1.5rem 1.5rem;
+‎        }
+‎        
+‎        /* ===== FAQ SECTION ===== */
+‎        .faq-item {
+‎            margin-bottom: 1rem;
+‎            border: 1px solid rgba(255,255,255,0.1);
+‎            border-radius: 8px;
+‎            overflow: hidden;
+‎        }
+‎        
+‎        .faq-question {
+‎            padding: 1.5rem;
+‎            background: var(--secondary);
+‎            display: flex;
+‎            justify-content: space-between;
+‎            align-items: center;
+‎            cursor: pointer;
+‎            font-weight: bold;
+‎        }
+‎        
+‎        .faq-answer {
+‎            max-height: 0;
+‎            overflow: hidden;
+‎            transition: max-height 0.5s ease;
+‎            background: rgba(30, 30, 60, 0.5);
+‎        }
+‎        
+‎        .faq-answer-inner {
+‎            padding: 1.5rem;
+‎        }
+‎        
+‎        .faq-item.active .faq-answer {
+‎            max-height: 500px;
+‎        }
+‎        
+‎        /* ===== PUBLICATION LINKS ===== */
+‎        .publications {
+‎            display: grid;
+‎            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+‎            gap: 1.5rem;
+‎            margin-top: 2rem;
+‎        }
+‎        
+‎        .publication-link {
+‎            display: block;
+‎            padding: 1rem;
+‎            background: var(--secondary);
+‎            border-radius: 8px;
+‎            transition: transform 0.3s ease;
+‎            text-align: center;
+‎        }
+‎        
+‎        .publication-link:hover {
+‎            transform: translateY(-5px);
+‎            background: var(--accent);
+‎        }
+‎        
+‎        /* ===== FOOTER ===== */
+‎        footer {
+‎            background: var(--primary);
+‎            padding: 3rem 0;
+‎            text-align: center;
+‎        }
+‎        
+‎        .social-icons {
+‎            display: flex;
+‎            justify-content: center;
+‎            gap: 1.5rem;
+‎            margin-bottom: 2rem;
+‎        }
+‎        
+‎        .social-icons a {
+‎            color: var(--text);
+‎            font-size: 1.5rem;
+‎            transition: color 0.3s ease;
+‎        }
+‎        
+‎        .social-icons a:hover {
+‎            color: var(--gold);
+‎        }
+‎        
+‎        /* ===== ANIMATIONS ===== */
+‎        @keyframes fadeIn {
+‎            from { opacity: 0; transform: translateY(20px); }
+‎            to { opacity: 1; transform: translateY(0); }
+‎        }
+‎        
+‎        /* ===== RESPONSIVE DESIGN ===== */
+‎        @media (max-width: 768px) {
+‎            .hero h1 {
+‎                font-size: 2.5rem;
+‎            }
+‎            
+‎            .timeline::before {
+‎                left: 30px;
+‎            }
+‎            
+‎            .timeline-item {
+‎                width: 100%;
+‎                padding-left: 70px;
+‎                padding-right: 25px;
+‎                text-align: left;
+‎            }
+‎            
+‎            .timeline-item:nth-child(odd),
+‎            .timeline-item:nth-child(even) {
+‎                left: 0;
+‎            }
+‎            
+‎            .timeline-img {
+‎                left: 15px !important;
+‎                right: auto !important;
+‎                width: 50px;
+‎                height: 50px;
+‎            }
+‎        }
+‎        
+‎        @media (max-width: 576px) {
+‎            .hero h1 {
+‎                font-size: 2rem;
+‎            }
+‎            
+‎            h2 {
+‎                font-size: 2rem;
+‎            }
+‎        }
+‎    </style>
 ‎</head>
 ‎<body>
-‎    <!-- Header -->
-‎    <header>
-‎        <div class="header-container">
-‎            <a href="#" class="logo">Divine Energy</a>
-‎            <nav>
-‎                <ul>
-‎                    <li><a href="#introduction">Introduction</a></li>
-‎                    <li><a href="#what-is">What is Divine Energy?</a></li>
-‎                    <li><a href="#history">Historical Background</a></li>
-‎                    <li><a href="#conclusion">Conclusion</a></li>
-‎                    <li><a href="#faq">FAQ</a></li>
-‎                </ul>
-‎            </nav>
-‎        </div>
-‎    </header>
+‎    <!-- ===== HERO SECTION ===== -->
+‎    <header class="hero">
+‎        <h1>DIVINE ENERGY IN THE AGE OF WIFI</h1>
+‎        <p>SYED WALEED MEHBOOB ALI</p>
+‎    </header>
 ‎
-‎    <!-- Hero Section -->
-‎    <section class="hero">
-‎        <div class="hero-content">
-‎            <h1>Divine Energy in the Age of WiFi</h1>
-‎            <p>Exploring consciousness-based healing through philosophical, historical, scientific, and ethical lenses</p>
-‎            <p class="author">By Syed Waleed Mehboob Ali</p>
-‎        </div>
-‎    </section>
+‎    <!-- ===== INTRODUCTION SECTION ===== -->
+‎    <section class="container">
+‎        <h2>Introduction</h2>
+‎        <p>The author of this paper is a businessman operating in the construction and marble sector. Outside of his commercial responsibilities, he has invested years in researching and practicing a consciousness-based healing method. Rooted in both experiential observation and intellectual synthesis, this method does not emerge from religious mysticism but from a rational inquiry into the relationship between human cognition, subtle energy, and behavior. This paper introduces and defends the concept of 'Divine Energy' as a subtle but powerful presence in the human experience, explored through philosophical, historical, scientific, and ethical lenses.</p>
+‎    </section>
 ‎
-‎    <!-- Main Content -->
-‎    <div class="container">
-‎        <!-- Introduction -->
-‎        <section id="introduction" class="section">
-‎            <h2 class="section-title">Introduction</h2>
-‎            <div class="content-block">
-‎                <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ancient Knowledge" class="content-image">
-‎                <p>The author of this paper, Syed Waleed Mehboob Ali is a businessman operating in the construction and marble sector. Outside of his commercial responsibilities, he has invested years in researching and practicing a consciousness-based healing method. Rooted in both experiential observation and intellectual synthesis, this method does not emerge from religious mysticism but from a rational inquiry into the relationship between human cognition, subtle energy, and behavior. This paper introduces and defends the concept of 'Divine Energy' as a subtle but powerful presence in the human experience, explored through philosophical, historical, scientific, and ethical lenses.</p>
-‎            </div>
-‎        </section>
+‎    <!-- ===== WHAT IS DIVINE ENERGY SECTION ===== -->
+‎    <section class="container">
+‎        <h2>What is Divine Energy?</h2>
+‎        <p>Divine energy refers to a higher-dimensional form of conscious energy that permeates existence and interacts subtly with the human mind-body system. It is not electricity, magnetism, or any commonly understood physical force, it is a metaphysical phenomenon that functions at the intersection of consciousness, intention, and universal laws.</p>
+‎        
+‎        <h3>Philosophical Points:</h3>
+‎        <ul>
+‎            <li><strong>Unity of Existence:</strong> The ancient philosophical idea that all creation is interconnected and emerges from a singular source aligns with the concept of divine energy.</li>
+‎            <li><strong>Conscious Intent as Force:</strong> Many spiritual philosophies treat intention as a force, divine energy may be the medium through which such intentions operate.</li>
+‎            <li><strong>Haroot-Maroot Knowledge:</strong> Ancient traditions (as hinted in stories like Haroot and Maroot) propose the existence of an advanced knowledge system accessible to certain individuals. This knowledge includes manipulating unseen realities ethically.</li>
+‎        </ul>
+‎    </section>
 ‎
-‎        <!-- What is Divine Energy -->
-‎        <section id="what-is" class="section">
-‎            <h2 class="section-title">What is Divine Energy?</h2>
-‎            <div class="content-block">
-‎                <div class="two-column">
-‎                    <div class="column">
-‎                        <p>Divine energy refers to a higher-dimensional form of conscious energy that permeates existence and interacts subtly with the human mind-body system. It is not electricity, magnetism, or any commonly understood physical force, it is a metaphysical phenomenon that functions at the intersection of consciousness, intention, and universal laws.</p>
-‎                    </div>
-‎                    <div class="column">
-‎                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Energy Flow" class="content-image">
-‎                    </div>
-‎                </div>
-‎                
-‎                <h3>Philosophical Points:</h3>
-‎                <ul>
-‎                    <li><strong>Unity of Existence:</strong> The ancient philosophical idea that all creation is interconnected and emerges from a singular source aligns with the concept of divine energy.</li>
-‎                    <li><strong>Conscious Intent as Force:</strong> Many spiritual philosophies treat intention as a force, divine energy may be the medium through which such intentions operate.</li>
-‎                    <li><strong>Haroot-Maroot Knowledge:</strong> Ancient traditions (as hinted in stories like Haroot and Maroot) propose the existence of an advanced knowledge system accessible to certain individuals. This knowledge includes manipulating unseen realities ethically.</li>
-‎                </ul>
-‎            </div>
-‎        </section>
+‎    <!-- ===== HISTORICAL BACKGROUND SECTION ===== -->
+‎    <section class="container">
+‎        <h2>Historical Background of Divine Energy Across Civilizations</h2>
+‎        <div class="timeline">
+‎            <div class="timeline-item">
+‎                <div class="timeline-img" style="background-image: url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+‎                <div class="timeline-content">
+‎                    <h3>Mesopotamian Civilization</h3>
+‎                    <p>One of the earliest civilizations to explore divine energy through astrology, symbolic rituals, and cuneiform records. Energy was associated with planetary deities, each with distinct frequencies.</p>
+‎                </div>
+‎            </div>
+‎            <div class="timeline-item">
+‎                <div class="timeline-img" style="background-image: url('https://images.unsplash.com/photo-1527061011665-3652c757a4d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+‎                <div class="timeline-content">
+‎                    <h3>Ancient Egypt</h3>
+‎                    <p>Egyptian priesthoods used sacred geometry and ritual harmonics in temples, believing divine energy could be channeled to preserve life essence (Ka).</p>
+‎                </div>
+‎            </div>
+‎            <div class="timeline-item">
+‎                <div class="timeline-img" style="background-image: url('https://images.unsplash.com/photo-1588286840104-8957b019727f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+‎                <div class="timeline-content">
+‎                    <h3>Indus Valley Civilization</h3>
+‎                    <p>Though fewer written records exist, archaeological evidence of meditative postures and symmetrical urban planning suggests energetic alignment with cosmic order.</p>
+‎                </div>
+‎            </div>
+‎            <div class="timeline-item">
+‎                <div class="timeline-img" style="background-image: url('https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
+‎                <div class="timeline-content">
+‎                    <h3>Chinese Civilization</h3>
+‎                    <p>Daoism and early Chinese medicine emphasized Qi—life force energy circulating through meridians. This is a highly aligned concept with divine energy.</p>
+‎                </div>
+‎            </div>
+‎        </div>
+‎    </section>
 ‎
-‎        <!-- Historical Background -->
-‎        <section id="history" class="section">
-‎            <h2 class="section-title">Historical Background</h2>
-‎            <div class="content-block">
-‎                <img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ancient Civilizations" class="content-image">
-‎                
-‎                <div class="two-column">
-‎                    <div class="column">
-‎                        <h3>Ancient Civilizations</h3>
-‎                        <ol>
-‎                            <li><strong>Mesopotamian Civilization:</strong> One of the earliest civilizations to explore divine energy through astrology, symbolic rituals, and cuneiform records.</li>
-‎                            <li><strong>Ancient Egypt:</strong> Egyptian priesthoods used sacred geometry and ritual harmonics in temples, believing divine energy could be channeled to preserve life essence (Ka).</li>
-‎                            <li><strong>Indus Valley Civilization:</strong> Archaeological evidence of meditative postures and symmetrical urban planning suggests energetic alignment with cosmic order.</li>
-‎                            <li><strong>Chinese Civilization:</strong> Daoism and early Chinese medicine emphasized Qi, life force energy circulating through meridians.</li>
-‎                        </ol>
-‎                    </div>
-‎                    <div class="column">
-‎                        <h3>Continued Traditions</h3>
-‎                        <ol start="5">
-‎                            <li><strong>Greek Civilization:</strong> Greek philosophers like Pythagoras and Plato explored 'Nous' and 'Logos', representing universal mind and order.</li>
-‎                            <li><strong>Islamic Golden Age:</strong> Thinkers like Al-Farabi and Ibn Sina explored metaphysical energies, consciousness, and the interaction between mind and body.</li>
-‎                            <li><strong>Native American Cultures:</strong> Belief in spirit energy and sacred sites shows an intuitive understanding of divine frequency alignment.</li>
-‎                            <li><strong>Mystical Traditions Globally:</strong> From Kabbalah to ancient Persian mysticism, divine energy was treated as a layer of reality.</li>
-‎                        </ol>
-‎                    </div>
-‎                </div>
-‎            </div>
-‎            
-‎            <!-- In the Age of WiFi -->
-‎            <div class="content-block">
-‎                <h3>In the Age of WiFi</h3>
-‎                <div class="two-column">
-‎                    <div class="column">
-‎                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Digital Age" class="content-image">
-‎                    </div>
-‎                    <div class="column">
-‎                        <p>In the modern age, where electromagnetic waves, digital connectivity, and neurological research intersect, divine energy must be understood through contemporary tools. 'In the Age of WiFi' signifies the current intellectual and technological framework we possess to explore ancient truths.</p>
-‎                        <ul>
-‎                            <li>Today, brainwave analysis, electromagnetic field studies, and frequency-based healing tools provide indirect support to ancient claims.</li>
-‎                            <li>The proliferation of consciousness-related fields like noetic sciences and neuroplasticity has reopened doors to understanding divine energy in scientific language.</li>
-‎                            <li>Modern society is overloaded with frequencies, making inner silence and energetic clarity harder, yet also more necessary.</li>
-‎                        </ul>
-‎                    </div>
-‎                </div>
-‎            </div>
-‎            
-‎            <!-- Scientific Framework -->
-‎            <div class="content-block">
-‎                <h3>Scientific Framework and Parallels</h3>
-‎                <ol>
-‎                    <li><strong>Brain Waves & Frequency Theory:</strong> The brain emits measurable waves (Alpha, Theta, Gamma) linked with different mental and emotional states.</li>
-‎                    <li><strong>Cymatics:</strong> Patterns created by sound on physical mediums show how frequency shapes matter.</li>
-‎                    <li><strong>Quantum Entanglement:</strong> Suggests particles can affect one another across distances.</li>
-‎                    <li><strong>Fractal Geometry in Nature:</strong> Recurring fractal patterns point to an organizing principle behind all life.</li>
-‎                    <li><strong>Biofield Research:</strong> Scientific inquiry into the human energetic field (biofield) is now being conducted in medical institutions.</li>
-‎                </ol>
-‎                
-‎                <div class="references">
-‎                    <h4>References:</h4>
-‎                    <p>McTaggart, L. (2007). The Intention Experiment.</p>
-‎                    <p>Sheldrake, R. (2012). Science Set Free.</p>
-‎                    <p>Lipton, B. (2005). The Biology of Belief.</p>
-‎                </div>
-‎            </div>
-‎            
-‎            <!-- Ethical Framework -->
-‎            <div class="content-block">
-‎                <h3>Ethical Framework of Energy Mastery</h3>
-‎                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ethics" class="content-image">
-‎                <ol>
-‎                    <li><strong>Intention & Consent:</strong> The user of divine energy must align with ethical intent.</li>
-‎                    <li><strong>Accountability Mechanism:</strong> Mastery comes with psychological tests and must be filtered through personal accountability.</li>
-‎                    <li><strong>Self-Awareness as Prerequisite:</strong> Mastery cannot occur without full internal clarity.</li>
-‎                    <li><strong>Divine Names Misuse:</strong> When divine names are used for harm, the ethical violation is far deeper.</li>
-‎                    <li><strong>Filters Must Be Built-In:</strong> Knowledge must come with inner filtration systems.</li>
-‎                    <li><strong>Not For Public Spectacle:</strong> This knowledge is not for fame but quiet inner mastery.</li>
-‎                </ol>
-‎            </div>
-‎            
-‎            <!-- Case Studies -->
-‎            <div class="content-block">
-‎                <h3>Case Studies Summary</h3>
-‎                <div class="two-column">
-‎                    <div class="column">
-‎                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Research" class="content-image">
-‎                    </div>
-‎                    <div class="column">
-‎                        <p>A range of qualitative case observations indicate measurable outcomes resulting from a non-invasive cognitive-energy realignment process. These include the resolution of interpersonal tensions, unblocking of delayed life events (e.g., employment or marriage), and improved decision-making trajectories in professional settings such as investment negotiations and business growth.</p>
-‎                        <p>In multiple instances, individuals or entire family units reported a sudden dissipation of mental fog, unexplained resistance, or circumstantial stagnation without any material intervention or external counsel.</p>
-‎                    </div>
-‎                </div>
-‎            </div>
-‎        </section>
+‎    <!-- ===== IN THE AGE OF WIFI SECTION ===== -->
+‎    <section class="container">
+‎        <h2>In the Age of WiFi</h2>
+‎        <p>In the modern age, where electromagnetic waves, digital connectivity, and neurological research intersect, divine energy must be understood through contemporary tools. 'In the Age of WiFi' signifies the current intellectual and technological framework we possess to explore ancient truths.</p>
+‎        <p>Today, brainwave analysis, electromagnetic field studies, and frequency-based healing tools provide indirect support to ancient claims.</p>
+‎        <p>The proliferation of consciousness-related fields like noetic sciences and neuroplasticity has reopened doors to understanding divine energy in scientific language.</p>
+‎        <p>Modern society is overloaded with frequencies, making inner silence and energetic clarity harder, yet also more necessary.</p>
+‎    </section>
 ‎
-‎        <!-- Conclusion -->
-‎        <section id="conclusion" class="section">
-‎            <h2 class="section-title">Conclusion</h2>
-‎            <div class="content-block">
-‎                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Cosmic Conclusion" class="content-image">
-‎                <p>Divine energy, as understood in ancient traditions and being rediscovered in the age of technology, represents a conscious force operating beyond the physical realm. It is accessible to those with a natural inclination, deep self-awareness, and ethical discipline. This energy is not a myth, it is a hidden framework through which subtle influence, healing, and alignment occur. In the Age of WiFi, as frequencies surround and shape us more than ever, reclaiming inner energetic clarity becomes not only possible but essential.</p>
-‎                <p>The author proposes this not as an absolute doctrine but as an evolving field of inquiry that merges the sacred with the scientific. While not yet measurable by standard instruments, divine energy manifests in human transformation, intention, and synchronicity. It is a gift, a test, and a tool.</p>
-‎            </div>
-‎        </section>
+‎    <!-- ===== SCIENTIFIC FRAMEWORK SECTION ===== -->
+‎    <section class="container">
+‎        <h2>Scientific Framework and Parallels</h2>
+‎        <div class="science-grid">
+‎            <div class="science-card">
+‎                <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Brain Waves">
+‎                <h3>Brain Waves & Frequency Theory</h3>
+‎                <p>The brain emits measurable waves (Alpha, Theta, Gamma) linked with different mental and emotional states. These waves resonate with specific external stimuli.</p>
+‎            </div>
+‎            <div class="science-card">
+‎                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Quantum Physics">
+‎                <h3>Quantum Entanglement</h3>
+‎                <p>Suggests particles can affect one another across distances, hinting at an interconnected matrix where conscious energy could operate nonlocally.</p>
+‎            </div>
+‎            <div class="science-card">
+‎                <img src="https://images.unsplash.com/photo-1579820010410-c10411aaaa88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fractals">
+‎                <h3>Fractal Geometry in Nature</h3>
+‎                <p>Recurring fractal patterns from galaxies to neurons point to an organizing principle behind all life, divine energy may be its carrier.</p>
+‎            </div>
+‎        </div>
+‎    </section>
 ‎
-‎        <!-- FAQ -->
-‎        <section id="faq" class="section">
-‎            <h2 class="section-title">Frequently Asked Questions</h2>
-‎            <div class="content-block">
-‎                <div class="faq-item">
-‎                    <div class="faq-question">Is this energy the same as spirituality or religion?</div>
-‎                    <p>No. Divine energy is a metaphysical concept that can align with, but is not limited to religious frameworks. It is more aligned with consciousness-based science.</p>
-‎                </div>
-‎                
-‎                <div class="faq-item">
-‎                    <div class="faq-question">Is there any proof this energy exists?</div>
-‎                    <p>There is growing indirect evidence through frequency science, noetic studies, quantum models, and brain wave research. But direct physical evidence is still evolving.</p>
-‎                </div>
-‎                
-‎                <div class="faq-item">
-‎                    <div class="faq-question">Can everyone access this energy?</div>
-‎                    <p>Not equally. Some are born with a natural affinity. Others may train and develop partial access, but mastery requires a specific internal configuration.</p>
-‎                </div>
-‎                
-‎                <div class="faq-item">
-‎                    <div class="faq-question">Is this the same as black magic or sorcery?</div>
-‎                    <p>No. Black magic relies on rituals and often unethical intent. Divine energy operates through inner alignment and moral clarity.</p>
-‎                </div>
-‎                
-‎                <div class="faq-item">
-‎                    <div class="faq-question">What is meant by Haroot and Maroot knowledge?</div>
-‎                    <p>A symbolic representation of knowledge sent by God that could be used for good or evil. The author's concept parallels this as a consciousness-based science requiring ethical grounding.</p>
-‎                </div>
-‎                
-‎                <div class="faq-item">
-‎                    <div class="faq-question">Can this energy cause harm?</div>
-‎                    <p>Any powerful tool can. Divine energy must be wielded ethically. The internal ethical compass of the practitioner determines the outcome.</p>
-‎                </div>
-‎                
-‎                <div class="faq-item">
-‎                    <div class="faq-question">Why 'In the Age of WiFi'?</div>
-‎                    <p>Because modern humanity is deeply affected by frequency-driven environments. The term represents a need to understand divine energy through today's lens of connectivity, cognition, and complexity.</p>
-‎                </div>
-‎            </div>
-‎        </section>
-‎    </div>
+‎    <!-- ===== ETHICAL FRAMEWORK SECTION ===== -->
+‎    <section class="container">
+‎        <h2>Ethical Framework of Energy Mastery</h2>
+‎        <ul>
+‎            <li><strong>Intention & Consent:</strong> The user of divine energy must align with ethical intent. Unauthorized influence, even if mentally induced, is a breach of ethical boundaries.</li>
+‎            <li><strong>Accountability Mechanism:</strong> Mastery of this energy comes with psychological tests, ego, control, pride and must be filtered through a deep sense of personal accountability.</li>
+‎            <li><strong>Self-Awareness as Prerequisite:</strong> Mastery cannot occur without full internal clarity. Self-awareness includes accepting one's role as creation (makhlooq), not as an ultimate power.</li>
+‎            <li><strong>Divine Names Misuse:</strong> When divine names are used for harm, the ethical violation is far deeper than ordinary manipulation, akin to dark magic.</li>
+‎            <li><strong>Filters Must Be Built-In:</strong> As in advanced sciences, knowledge must come with inner filtration systems. The fear of accountability in the hereafter serves as a moral compass.</li>
+‎            <li><strong>Not For Public Spectacle:</strong> This knowledge is not for fame or public recognition, but quiet inner mastery and beneficial influence only.</li>
+‎        </ul>
+‎    </section>
 ‎
-‎    <!-- Footer -->
-‎    <footer>
-‎        <div class="container">
-‎            <div class="footer-links">
-‎                <a href="https://www.academia.edu/128772972/Divine_Energy_in_the_Age_of_WiFi" target="_blank">Academia.edu</a>
-‎                <a href="https://medium.com/@mysticvibesera/divine-energy-in-the-age-of-wifi-50a3ff7e90b9" target="_blank">Medium</a>
-‎                <a href="https://www.scribd.com/document/849315658/Divine-Energy-in-the-Age-of-WiFi" target="_blank">Scribd</a>
-‎                <a href="https://zenodo.org/records/15205348" target="_blank">Zenodo</a>
-‎                <a href="https://substack.com/@divineenergyintheageofwifi?utm_source=user-menu" target="_blank">Substack</a>
-‎            </div>
-‎            
-‎            <div class="copyright">
-‎                <p>© 2025 Syed Waleed Mehboob Ali. All Rights Reserved.</p>
-‎                <p>For inquiries, contact: mysticvibesera@gmail.com</p>
-‎            </div>
-‎        </div>
-‎    </footer>
+‎    <!-- ===== CASE STUDIES SECTION ===== -->
+‎    <section class="container">
+‎        <h2>Case Studies Summary</h2>
+‎        <p>A range of qualitative case observations indicate measurable outcomes resulting from a non-invasive cognitive-energy realignment process. These include the resolution of interpersonal tensions, unblocking of delayed life events (e.g., employment or marriage), and improved decision-making trajectories in professional settings such as investment negotiations and business growth.</p>
+‎        <p>In multiple instances, individuals or entire family units reported a sudden dissipation of mental fog, unexplained resistance, or circumstantial stagnation, without any material intervention or external counsel.</p>
+‎        <p>These cases suggest a recurring pattern of alignment between internal consciousness fields and external outcomes. The underlying mechanism may correlate with historical concepts found in ancient esoteric systems, particularly the knowledge tradition associated with Harut and Marut, understood here not as magical ritual but as an advanced model of consciousness-based influence.</p>
+‎        <p>All interventions were approached with ethical safeguards, emphasizing accountability, restraint, and a deep internal filter grounded in moral responsibility. While quantitative measurement tools are still evolving, the consistent experiential feedback across varied demographic profiles suggests the presence of an intelligible, replicable process operating beneath the surface of human interaction.</p>
+‎        <p>Identifying details of participants are withheld in accordance with privacy and research ethics standards.</p>
+‎    </section>
+‎
+‎    <!-- ===== CONCLUSION SECTION ===== -->
+‎    <section class="container">
+‎        <h2>Conclusion</h2>
+‎        <p>Divine energy, as understood in ancient traditions and being rediscovered in the age of technology, represents a conscious force operating beyond the physical realm. It is accessible to those with a natural inclination, deep self-awareness, and ethical discipline. This energy is not a myth, it is a hidden framework through which subtle influence, healing, and alignment occur. In the Age of WiFi, as frequencies surround and shape us more than ever, reclaiming inner energetic clarity becomes not only possible but essential.</p>
+‎        <p>The author proposes this not as an absolute doctrine but as an evolving field of inquiry that merges the sacred with the scientific. While not yet measurable by standard instruments, divine energy manifests in human transformation, intention, and synchronicity. It is a gift, a test, and a tool.</p>
+‎    </section>
+‎
+‎    <!-- ===== FAQ SECTION ===== -->
+‎    <section class="container">
+‎        <h2>FAQ</h2>
+‎        <div class="faq-item">
+‎            <div class="faq-question">
+‎                Is this energy the same as spirituality or religion?
+‎                <span class="toggle-icon">+</span>
+‎            </div>
+‎            <div class="faq-answer">
+‎                <div class="faq-answer-inner">
+‎                    <p>No. Divine energy is a metaphysical concept that can align with but is not limited to religious frameworks. It is more aligned with consciousness-based science.</p>
+‎                </div>
+‎            </div>
+‎        </div>
+‎        <div class="faq-item">
+‎            <div class="faq-question">
+‎                Is there any proof this energy exists?
+‎                <span class="toggle-icon">+</span>
+‎            </div>
+‎            <div class="faq-answer">
+‎                <div class="faq-answer-inner">
+‎                    <p>There is growing indirect evidence through frequency science, noetic studies, quantum models, and brain wave research. But direct physical evidence is still evolving.</p>
+‎                </div>
+‎            </div>
+‎        </div>
+‎        <div class="faq-item">
+‎            <div class="faq-question">
+‎                Can everyone access this energy?
+‎                <span class="toggle-icon">+</span>
+‎            </div>
+‎            <div class="faq-answer">
+‎                <div class="faq-answer-inner">
+‎                    <p>Not equally. Some are born with a natural affinity. Others may train and develop partial access, but mastery requires a specific internal configuration.</p>
+‎                </div>
+‎            </div>
+‎        </div>
+‎        <div class="faq-item">
+‎            <div class="faq-question">
+‎                Is this the same as black magic or sorcery?
+‎                <span class="toggle-icon">+</span>
+‎            </div>
+‎            <div class="faq-answer">
+‎                <div class="faq-answer-inner">
+‎                    <p>No. Black magic relies on rituals and often unethical intent. Divine energy operates through inner alignment and moral clarity.</p>
+‎                </div>
+‎            </div>
+‎        </div>
+‎    </section>
+‎
+‎    <!-- ===== PUBLISHED VERSIONS SECTION ===== -->
+‎    <section class="container">
+‎        <h2>Published versions</h2>
+‎        <div class="publications">
+‎            <a href="https://www.academia.edu/128772972/Divine_Energy_in_the_Age_of_WiFi" class="publication-link" target="_blank">
+‎                <i class="fas fa-book-open"></i> Academia.edu
+‎            </a>
+‎            <a href="https://medium.com/@mysticvibesera/divine-energy-in-the-age-of-wifi-50a3ff7e90b9" class="publication-link" target="_blank">
+‎                <i class="fab fa-medium"></i> Medium
+‎            </a>
+‎            <a href="https://www.scribd.com/document/849315658/Divine-Energy-in-the-Age-of-WiFi" class="publication-link" target="_blank">
+‎                <i class="fas fa-scroll"></i> Scribd
+‎            </a>
+‎            <a href="https://zenodo.org/records/15205348" class="publication-link" target="_blank">
+‎                <i class="fas fa-archive"></i> Zenodo
+‎            </a>
+‎        </div>
+‎    </section>
+‎
+‎    <!-- ===== FOOTER ===== -->
+‎    <footer class="container">
+‎        <div class="social-icons">
+‎            <a href="#"><i class="fab fa-twitter"></i></a>
+‎            <a href="#"><i class="fab fa-instagram"></i></a>
+‎            <a href="#"><i class="fab fa-linkedin"></i></a>
+‎            <a href="mailto:mysticvibesera@gmail.com"><i class="fas fa-envelope"></i></a>
+‎        </div>
+‎        <p>© 2025 Syed Waleed Mehboob Ali. All Rights Reserved.</p>
+‎        <p>For inquiries, contact: <a href="mailto:mysticvibesera@gmail.com">mysticvibesera@gmail.com</a></p>
+‎    </footer>
+‎
+‎    <script>
+‎        // FAQ toggle functionality
+‎        document.querySelectorAll('.faq-question').forEach(question => {
+‎            question.addEventListener('click', () => {
+‎                const item = question.parentElement;
+‎                item.classList.toggle('active');
+‎                
+‎                // Change icon
+‎                const icon = question.querySelector('.toggle-icon');
+‎                icon.textContent = item.classList.contains('active') ? '−' : '+';
+‎            });
+‎        });
+‎
+‎        // Create energy particles
+‎        function createParticles() {
+‎            const hero = document.querySelector('.hero');
+‎            for (let i = 0; i < 5; i++) {
+‎                const particle = document.createElement('div');
+‎                particle.classList.add('energy-particle');
+‎                particle.style.width = `${Math.random() * 100 + 50}px`;
+‎                particle.style.height = particle.style.width;
+‎                particle.style.left = `${Math.random() * 100}%`;
+‎                particle.style.top = `${Math.random() * 100}%`;
+‎                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+‎                particle.style.animationDelay = `${Math.random() * 5}s`;
+‎                hero.appendChild(particle);
+‎            }
+‎        }
+‎
+‎        // Initialize on load
+‎        window.addEventListener('load', () => {
+‎            createParticles();
+‎        });
+‎    </script>
 ‎</body>
 ‎</html>
