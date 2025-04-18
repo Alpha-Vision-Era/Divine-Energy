@@ -1,119 +1,170 @@
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Smooth Scroll Animation */
+html {
+    scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
-  background-color: #fdfdfd;
-  color: #222;
-  line-height: 1.7;
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
+/* Fade-in Effect for Sections */
+section {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
-h1, h2, h3 {
-  color: #2c3e50;
-  margin-bottom: 15px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-h1 {
-  font-size: 2.2rem;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
-}
-
-h2 {
-  font-size: 1.6rem;
-  margin-top: 30px;
-}
-
-h3 {
-  font-size: 1.3rem;
-  margin-top: 20px;
-}
-
-/* Paragraph */
-p {
-  margin-bottom: 15px;
-  font-size: 1.05rem;
-}
-
-/* Links */
+/* Slide-in Animation for Links */
 a {
-  color: #007acc;
-  text-decoration: none;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.6s ease-out forwards;
+    transition: color 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Hover Effects for Links */
+a:hover {
+    color: #1ABC9C;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects for Buttons */
+button {
+    background-color: #2980B9;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #1ABC9C;
+    transform: scale(1.05);  /* Slight scale effect on hover */
+}
+
+button:active {
+    transform: scale(0.98);  /* Scale down when clicked */
+}
+
+/* Animated Fade-in for FAQ List */
+dl {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Interactive Button Hover Effect */
+button {
+    background-color: #2980B9;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #1ABC9C;
+    transform: scale(1.05);  /* Slight scale effect on hover */
+}
+
+button:active {
+    transform: scale(0.98);  /* Scale down when clicked */
+}
+
+/* Fade-in for Header and Sections */
+h1, h2 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* Fade-up Animation for Sections as User Scrolls */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-in-out forwards;
+}
+
+/* Reveal Animation for Content on Scroll (triggered via IntersectionObserver or AOS library) */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects for Links */
+a:hover {
+    color: #2980B9;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+/* Animate List Items */
+ul li {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 1s ease-in-out forwards;
+}
+
+ul li:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+ul li:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+/* Hover Animation for Anchor Links */
+a {
+    text-decoration: none;
+    color: #2980B9;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
-}
-
-/* Lists */
-ul, ol {
-  margin-left: 25px;
-  margin-bottom: 20px;
-}
-
-/* Blockquote */
-blockquote {
-  margin: 20px 0;
-  padding-left: 20px;
-  border-left: 4px solid #ccc;
-  font-style: italic;
-  color: #555;
-}
-
-/* Image */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-/* Code Block */
-pre {
-  background: #f4f4f4;
-  padding: 15px;
-  overflow-x: auto;
-  border-left: 4px solid #ccc;
-  font-family: monospace;
-}
-
-/* Footer or contact info */
-footer {
-  margin-top: 50px;
-  font-size: 0.9rem;
-  color: #777;
-  text-align: center;
-}
-
-/* Light Container Box */
-.container {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  margin-bottom: 40px;
-}
-
-/* Responsive Text */
-@media (max-width: 600px) {
-  body {
-    padding: 10px;
-  }
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-  p {
-    font-size: 1rem;
-  }
+    color: #1ABC9C;
+    text-decoration: underline;
 }
