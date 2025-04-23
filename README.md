@@ -55,7 +55,7 @@ Businessman | Independent Researcher | Energy Explorer
 Email: [mysticvibesera@gmail.com](mailto:mysticvibesera@gmail.com)
 
 ### **Social Links:**
-- [Facebook](https://www.facebook.com/share/p/18hGXadqbr/)
+- [Facebook](https://www.facebook.com/share/16JfNKgCDY/)
 - [Instagram – @divine.energy.work](https://www.instagram.com/divine.energy.work?igsh=MXc4YWN0ajlmMmwzbw==)
 - [Threads – @divine.energy.work](https://www.threads.net/@divine.energy.work)
 
