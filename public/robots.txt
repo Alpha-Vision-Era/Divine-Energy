@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://divine-energy.vercel.app/sitemap.xml
