@@ -5,6 +5,34 @@
 
 ---
 
+## About Syed Waleed Mehboob Ali
+
+**Divine Frequency Alignment Practitioner | Brainwave-Based Healer | In Training with HeartMath methods and the science of Heart-Brain Coherence**
+
+Syed Waleed Mehboob Ali is a frequency-based healer from Pakistan who combines brainwave alignment, mental coherence, and energy balancing techniques in his practice. He is currently training in the science of Heart-Brain Coherence, inspired by the research of the HeartMath Institute.
+
+Although not yet officially certified, he integrates HeartMath-informed concepts such as heart-focused breathing, emotional self-regulation, and coherence practices into his unique healing method, which he calls *Divine Frequency Alignment*.
+
+His approach is non-hypnotic, non-ritualistic, and free from traditional spiritual symbolism. Instead, it emphasizes clarity of thought, mental focus, and natural energetic resonance to help clients with emotional blocks, stress, relationship imbalances, and unexplainable delays in career or life progress.
+
+Waleed believes true healing occurs when the brain, heart, and subtle energies of the body come into resonance — a concept supported by scientific studies in neurocardiology and quantum biology.
+
+> “I am not a guru or mystic. I am simply a practitioner of mental coherence and divine alignment. All healing belongs to Allah.” – Syed Waleed Mehboob Ali
+
+---
+
+## Disclaimer
+
+This work is independently developed and not affiliated, endorsed, or officially certified by the HeartMath Institute. HeartMath® is a registered trademark of the HeartMath Institute.
+
+---
+
+## Keywords (for indexing)
+
+Heart-Brain Coherence · Brainwave Healing · Divine Frequency Alignment · HeartMath Inspired · Energy Healing · Stress Relief · Emotional Balance · Spiritual Alignment · Consciousness Work · Pakistan Healer · Brain Frequency Therapy
+
+---
+
 ## Overview
 
 This repository presents a transdisciplinary body of work connecting consciousness, frequency science, and divine patterns. It explores healing through **neural resonance**, and later expands into **cosmic structure theory**, spiritual intelligence, and **fluidic galactic dynamics**.
